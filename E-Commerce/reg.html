@@ -1,0 +1,223 @@
+<html lang="en">
+    <head>
+        <title>SignUp</title>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <!-- font awesome icon cdn -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <!-- Compiled and minified CSS -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+
+        <!-- Compiled and minified JavaScript -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+        
+        <style>
+            body{
+                overflow-y: hidden;
+            }
+            *
+            {
+                margin: 0;
+                padding: 0;
+            }
+            .filled-in
+            {
+                background-color: c
+            }
+            .animation-box
+            {
+                background: linear-gradient(to left,#ff9f1a,black);
+                width: 100%;
+                height:100%;
+            }
+            .box-area
+            {
+             position: absolute;
+             top: 0;
+             left:0;
+             width: 100%;
+             height: 100%;
+             overflow: hidden;
+            }
+            .box-area li
+            {
+                position: absolute;
+                display: block;
+                list-style: none;
+                width: 25px;
+                height: 25px;
+                background: rgba(255, 255, 255, 0.2);
+                animation: animate 20s linear infinite;
+            }
+            .box-area li
+            {
+                position: absolute;
+                display: block;
+                list-style: none;
+                width: 35px;
+                height: 35px;
+                background: rgba(255, 255, 255, 0.2);
+                animation: animate 20s linear infinite;
+                bottom: -150px;
+            }
+            .box-area li:nth-child(1)
+            {
+                left: 80%;
+                width: 80px;
+                height: 80px;
+                animation-delay:0s ;
+            }
+            .box-area li:nth-child(2)
+            {
+                left: 15%;
+                width: 30px;
+                height: 30px;
+                animation-delay:1.5s ;
+                animation-duration: 10s;
+            }
+            .box-area li:nth-child(3)
+            {
+                left: 70%;
+                width: 100px;
+                height: 100px;
+                animation-delay:0s;
+            }
+            .box-area li:nth-child(4)
+            {
+                left: 42%;
+                width: 150px;
+                height: 150px;
+                animation-delay:0s;
+                animation-duration: 15s;
+            }
+            .box-area li:nth-child(5)
+            {
+                left: 35%;
+                width: 40px;
+                height: 40px;
+                animation-delay:0s;
+            }
+            .box-area li:nth-child(6)
+            {
+                left: 15%;
+                width: 110px;
+                height: 110px;
+                animation-delay:3.5s;
+            }
+            @keyframes animate
+            {
+                0%
+                {
+                    transform: translateY(0) rotate(0deg);
+                    opacity: 1;
+                }
+               100%
+                {
+                    transform: translateY(-800px) rotate(360deg);
+                    opacity: 0;
+                }
+            }
+        </style>
+
+       
+    </head>
+    <body>
+        <div class="animation-box">
+            <ul class="box-area">
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+
+        <div class="container p-4">
+            <div class="card p-3"
+                 style="box-shadow:10px 10px 25px black #ff9f1a;
+                 border-radius: 10px;
+                 background-image: url('assets/image/login.png');
+                 background-size: cover;
+                 background-repeat: no-repeat;
+                 height: 80vh;">
+
+                <div style="
+                     height: 100%;
+                     width: 100%;
+                     ">
+                    <div class="row">
+                        <div class="col s6" style="height: 75vh;"></div>
+                        <div class="col s6" style="height: 75vh;padding-top:10vh;">
+
+
+                            <form class="col s12" action=""  method="post" name="form">
+                                <div class="row">
+                                    <div class="input-field col s12 m-2">
+                                        <i class="material-icons prefix">account_circle</i>
+                                        <input id="uname" type="text" name="uname">
+                                        <span id="error_name" class="lead text-danger"></span>
+                                        <label for="icon_prefix"> UserName</label>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="input-field col s12 m-2">
+                                        <i class="material-icons prefix">email</i>
+                                        <input id="uemail" type="email" name="uemail">
+                                        <span id="error_email" class="lead text-danger"></span>
+                                        <label for="icon_email">Email Address</label>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="input-field col s12 m-2">
+                                        <i class="material-icons prefix">lock</i>
+                                        <input id="upassword" type="password"name="upassword">
+                                        <span id="error_password" class="lead text-danger"></span>
+                                        <label for="icon_password">Enter Password</label>
+                                    </div>
+                                </div>
+
+                                <p style="margin-top: -20px; margin-left: 10px;">
+                                    <label>
+                                        <input name="group" type="radio" style="background-color: #1A104C;"/>
+                                        <span style="color: #ff9f1a;font-weight: bold;">I accept the terms and policy</span>
+                                    </label>
+                                </p>          
+
+                                <div class="form-group">
+                                    <a href="signup.html"><button type="submit" class="btn btn-lg" style="width:100%; height: 50px; background-color: #ff9f1a; border-radius: 50px; color: white;font-size: 20px;font-weight: bold;"><b>SignUp</b></button></a>
+                                </div>
+                                <div class="row" style=" margin-left: 30%;">
+                                    <a href="signup.html">Already Have An Account!</a>
+                                </div>
+
+
+                            </form>
+
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>  
+    </body>
+
+</html>
